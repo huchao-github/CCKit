@@ -1,0 +1,49 @@
+//
+//  CCCategory+UIView.h
+//  CCKit
+//
+//  Created by 胡超 on 2017/11/11.
+//  Copyright © 2017年 胡超., ltd. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@class MASConstraintMaker;
+
+typedef NS_ENUM(NSInteger,CCBorderMask) {
+    CCBorderMaskTop         = 1 << 0,
+    CCBorderMaskBottom      = 1 << 1,
+    CCBorderMaskLeft        = 1 << 2,
+    CCBorderMaskRight       = 1 << 3,
+    CCBorderMaskTopBottom   = (CCBorderMaskTop | CCBorderMaskBottom),
+    CCBorderMaskLeftRight   = (CCBorderMaskLeft | CCBorderMaskRight),
+    CCBorderMaskAll         = (CCBorderMaskTop | CCBorderMaskBottom | CCBorderMaskLeft | CCBorderMaskRight),
+};
+
+@interface CCBorderLayer : CALayer
+@end
+
+@interface UIView (CCKit)
+
+@property (nonatomic,assign) CGPoint origin;
+@property (nonatomic,assign) CGSize  size;
+@property (nonatomic,assign) CGFloat width;
+@property (nonatomic,assign) CGFloat height;
+@property (nonatomic,assign) CGFloat top;
+@property (nonatomic,assign) CGFloat left;
+@property (nonatomic,assign) CGFloat bottom;
+@property (nonatomic,assign) CGFloat right;
+@property (nonatomic,assign) CGFloat centerX;
+@property (nonatomic,assign) CGFloat centerY;
+
+
+@property (nonatomic,readonly) void(^addSubview)(UIView *view);
+@property (nonatomic,readonly) void(^addSubviewMaker)(UIView *view, void(^)(MASConstraintMaker *make));
+@property (nonatomic,readonly) void(^removeAllSubviews)(void);
+
+#pragma mark - Border
+
+@property (nonatomic,readonly) CCBorderLayer *borderLayer;
+@property (nonatomic,readonly) void(^setBorder)(CGFloat borderWidth, UIColor *borderColor, CCBorderMask borderMask);
+
+@end
