@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^CCIAPSuccess)(void);
+typedef void(^CCIAPSuccess)(NSString *receiptData);
 typedef void(^CCIAPFailure)(BOOL isCanceled, NSError *error);
 
 @interface CCInAppPurchaseHelper : NSObject
@@ -17,7 +17,7 @@ typedef void(^CCIAPFailure)(BOOL isCanceled, NSError *error);
 @property (nonatomic,copy) CCIAPFailure failureHandler;
 
 /** 内购订单验证参数 {"receipt-data":"xxxxx"}*/
-@property (nonatomic,readonly) NSString *receiptData;
+//@property (nonatomic,readonly) NSString *receiptData;
 
 + (CCInAppPurchaseHelper *)helper;
 

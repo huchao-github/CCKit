@@ -11,5 +11,6 @@
 @interface UIAlertController (CCKit)
 
 @property (class,readonly) void(^alert)(NSString *title, NSString *message, NSArray *buttons, void(^actions)(NSInteger buttonIndex));
+@property (class,readonly) void(^actionSheet)(NSString *title, NSString *message, NSArray *buttons, NSString *cancelButtonTitle, void(^actions)(NSInteger buttonIndex));
 
 @end

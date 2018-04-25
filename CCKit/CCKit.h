@@ -29,3 +29,6 @@ FOUNDATION_EXPORT const unsigned char CCKitVersionString[];
 #import "CCModalView.h"
 #import "CCLoadingTipView.h"
 #import "CCLoadingHUD.h"
+#import "CCTableViewController.h"
+#import "CCTableViewSection.h"
+#import "CCTableViewCell.h"

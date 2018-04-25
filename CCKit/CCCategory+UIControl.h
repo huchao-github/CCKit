@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^CCUIControlAction)(id sender);
+
 @interface UIControl (CCKit)
 
 @property (nonatomic,readonly) void (^addTarget)(id target, SEL action, UIControlEvents controlEvents);
+@property (nonatomic,readonly) void (^addAction)(UIControlEvents controlEvents, CCUIControlAction action);
 
 @end

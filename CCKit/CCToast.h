@@ -12,4 +12,6 @@
 
 + (void)toast:(NSString *)message;
 
++ (void)toastWithStopLoadingHUD:(NSString *)message;
+
 @end
