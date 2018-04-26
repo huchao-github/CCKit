@@ -23,11 +23,13 @@ typedef void(^CCTableViewCellSelectedHandler)(void);
 
 + (instancetype)customCell;
 + (instancetype)normalCellWithTitle:(NSString *)title;
++ (instancetype)normalCellWithTitle:(NSString *)title accessoryType:(int)accessoryType;
++ (instancetype)normalCellWithTitle:(NSString *)title selectionStyle:(BOOL)selectionStyle accessoryType:(int)accessoryType;
 + (instancetype)normalCellWithTitle:(NSString *)title selectedHandler:(CCTableViewCellSelectedHandler)selectedHandler;
 + (instancetype)normalCellWithTitle:(NSString *)title detailText:(NSString *)detailText selectedHandler:(CCTableViewCellSelectedHandler)selectedHandler;
 + (instancetype)normalCellWithTitle:(NSString *)title imageName:(NSString *)imageName;
 + (instancetype)normalCellWithTitle:(NSString *)title imageName:(NSString *)imageName selectedHandler:(CCTableViewCellSelectedHandler)selectedHandler;
 + (instancetype)normalCellWithTitle:(NSString *)title imageName:(NSString *)imageName detailText:(NSString *)detailText selectedHandler:(CCTableViewCellSelectedHandler)selectedHandler;
-+ (instancetype)normalCellWithTitle:(NSString *)title imageName:(NSString *)imageName detailText:(NSString *)detailText accessoryType:(int)accessoryType selectedHandler:(CCTableViewCellSelectedHandler)selectedHandler;
++ (instancetype)normalCellWithTitle:(NSString *)title imageName:(NSString *)imageName detailText:(NSString *)detailText selectionStyle:(BOOL)selectionStyle accessoryType:(int)accessoryType selectedHandler:(CCTableViewCellSelectedHandler)selectedHandler;
 
 @end

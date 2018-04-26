@@ -9,9 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "CCTableViewSection.h"
 
-@interface CCTableViewController : UITableViewController
+@interface CCTableViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
-- (void)loadCells;
+@property (nonatomic,readonly) UITableView *tableView;
+
+- (instancetype)initWithStyle:(UITableViewStyle)style;
+
+- (void)loadStaticTableView;
 
 - (void)addSection:(CCTableViewSection *)section;
 - (void)insertSection:(CCTableViewSection *)section atIndex:(NSInteger)atIndex;
