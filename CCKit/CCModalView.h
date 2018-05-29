@@ -42,6 +42,9 @@ typedef NS_ENUM(NSInteger, CCModalPresentType)
 
 - (void)viewWillPresent;
 
+/** 该方法仅对CCModalPresentTypeMoveFromBottom有效*/
+- (void)updateContainerViewHeight:(CGFloat)height animated:(BOOL)animated;
+
 #pragma mark - 子类实现
 /** 自定义present动画*/
 - (void)containerCustomPresentAnimation;

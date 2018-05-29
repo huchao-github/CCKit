@@ -10,4 +10,7 @@
 
 @interface NSObject (CCKit)
 
+/** [object isKindOfClass:NSNull.class]*/
+@property (readonly) BOOL isNull;
+
 @end

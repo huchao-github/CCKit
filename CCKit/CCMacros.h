@@ -28,5 +28,6 @@ _Pragma("clang diagnostic pop")
 #define IPHONE_X                (CGSizeEqualToSize(UIScreenSize, CGSizeMake(375, 812)))
 #define WeakSelf                __weak __typeof(&*self)WSelf = self
 #define WeakObjc(objc,WObjc)    __weak __typeof(&*objc)WObjc = objc
+#define RotateAngle(angle)      ((angle) * M_PI / 180)
 
 #endif /* CCMacros_h */
