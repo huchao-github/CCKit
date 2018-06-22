@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSInteger, CCTabBarItemBadgeStyle) {
     CCTabBarItemBadgeStyleDefault,
     CCTabBarItemBadgeStyleDot,
@@ -15,19 +17,23 @@ typedef NS_ENUM(NSInteger, CCTabBarItemBadgeStyle) {
 
 @interface CCTabBarItem : UIButton
 
-@property (nonatomic,copy)  NSString *itemTitle;
-@property (nonatomic,strong) UIImage *itemImage;
-@property (nonatomic,strong) UIImage *itemSelectedImage;
+@property (nonatomic,nullable,copy)  NSString *itemTitle;
+@property (nonatomic,nullable,strong) UIImage *itemImage;
 
-@property (nonatomic,assign) NSInteger index;
+/** 普通状态颜色*/
+//@property(null_resettable, nonatomic, strong) UIColor *tintColor NS_AVAILABLE_IOS(7_0);
+/** 选中状态颜色*/
+@property(null_resettable, nonatomic, strong) UIColor *selectedColor;
 
 /** 是否显示badge*/
 @property (nonatomic,assign) BOOL showBadge;
 /** badge类型, 默认为:CCTabBarItemBadgeStyleDefault当badgeStyle == CCTabBarItemBadgeStyleDefault时，设置badgeValue有效*/
 @property (nonatomic,assign) CCTabBarItemBadgeStyle badgeStyle;
 /** badge内容*/
-@property (nonatomic,strong) NSString *badgeValue;
+@property (nonatomic,nullable,strong) NSString *badgeValue;
 /** badge颜色，默认为:redColor */
-@property (nonatomic,strong) UIColor *badgeColor;
+@property (nonatomic,nullable,strong) UIColor *badgeColor;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface CCNavigationController : UINavigationController
+/** 是否显示自定义返回按钮*/
+@property (nonatomic,readonly) BOOL prefersCustomBackBarItem;
+/** 自定义返回按钮标题*/
+@property (nonatomic,readonly) NSString *prefersCustomBackBarItemTitle;
+
 @end
 
 @interface UIViewController (CCNavigationController)

@@ -7,35 +7,37 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CCMacros.h"
 
-//enum {
-//    CCLoadingTipIsLoading,
-//    CCLoadingTipError,
-//};
-//typedef int CCLoadingTipType;
+typedef NSString * CCLoadingTipType;
+
+CCKIT_EXTERN CCLoadingTipType const CCLoadingTipTypeError;
+CCKIT_EXTERN CCLoadingTipType const CCLoadingTipTypeNoInternet;
 
 @interface CCLoadingTipView : UIView
 
-@property (nonatomic,assign) BOOL isLoadingState;
 /** 自定义Loading状态指示器*/
-@property (nonatomic,strong) UIView *customIndicatorView;
-//@property (nonatomic,assign) CCLoadingTipType type;
-@property (nonatomic,copy) NSString *tipMsg;
-//@property (nonatomic,copy) void(^buttonAction)(void);
++ (void)setCustomIndicatorView:(UIView *)customIndicatorView;
 
-+ (void)setImage:(UIImage *)image tipMsg:(NSString *)tipMsg forTipType:(int)tipType;
++ (void)setImageName:(NSString *)imageName tipMsg:(NSString *)tipMsg forTipType:(CCLoadingTipType)tipType;
 
-+ (void)startLoadingTipInView:(UIView *)view;
++ (void)setButtonTintColor:(UIColor *)tintColor;
 
-//+ (void)showTip
+#pragma mark ----
+
++ (void)startLoadingInView:(UIView *)inView;
+
++ (void)showTipWithType:(CCLoadingTipType)tipType inView:(UIView *)inView;
+
++ (void)showTipWithType:(CCLoadingTipType)tipType inView:(UIView *)inView buttonAction:(void(^)(void))buttonAction;
+
++ (void)showTipWithImage:(UIImage *)image tipMsg:(NSString *)tipMsg inView:(UIView *)inView;
+
++ (void)showTipWithImage:(UIImage *)image tipMsg:(NSString *)tipMsg inView:(UIView *)inView buttonAction:(void(^)(void))buttonAction;
+
++ (void)showTipWithError:(NSError *)error inView:(UIView *)inView;
 
 + (void)showTipWithError:(NSError *)error inView:(UIView *)inView buttonAction:(void(^)(void))buttonAction;
-
-//+ (void)showTip:(CCLoadingTipType)tipType inView:(UIView *)inView;
-//
-//+ (void)showTip:(CCLoadingTipType)tipType tipMsg:(NSString *)tipMsg inView:(UIView *)inView;
-//
-//+ (void)showTip:(CCLoadingTipType)tipType tipMsg:(NSString *)tipMsg inView:(UIView *)inView buttonAction:(void(^)(void))buttonAction;
 
 + (void)hideTipViewForView:(UIView *)forView;
 

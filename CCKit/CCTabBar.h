@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "CCTabBarItem.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class CCTabBar;
 
 static CGFloat CCTabBarHeight = 50.0f;
@@ -30,8 +32,15 @@ static CGFloat CCTabBarHeight = 50.0f;
 @property (nonatomic,assign) CCTabBarItem *selectedItem;
 @property (nonatomic,assign) BOOL borderHidden;
 
+/** 普通状态颜色*/
+@property(null_resettable, nonatomic, strong) UIColor *tintColor NS_AVAILABLE_IOS(7_0);
+/** 选中状态颜色*/
+@property(null_resettable, nonatomic, strong) UIColor *selectedColor;
+
 /** 中间附加Item*/
 - (void)addExtraItem:(UIButton *)extraItem offsetY:(CGFloat)offsetY;
 - (void)removeExtraItem;
 
 @end
+
+NS_ASSUME_NONNULL_END

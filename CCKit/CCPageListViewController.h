@@ -17,11 +17,6 @@ typedef NS_ENUM(NSInteger, CCPageViewType) {
 };
 
 @interface CCPageListViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
-{
-    IBOutlet UITableView                *_tableView;
-    IBOutlet UICollectionView           *_collectionView;
-    IBOutlet UICollectionViewFlowLayout *_collectionViewLayout;
-}
 
 @property (nonatomic,readonly) CCPageViewType viewType;
 
@@ -42,11 +37,7 @@ typedef NS_ENUM(NSInteger, CCPageViewType) {
 
 - (Class)mjRefreshFooterClass;
 
-- (void)startRefresh;
-
-- (void)requestRefresh;
-
-- (void)requestLoadMore;
+- (void)beginRefreshing;
 
 - (void)requestPageList;
 
