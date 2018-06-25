@@ -13,5 +13,7 @@
 @property (readonly) NSString *md5Str;
 @property (readonly) NSString *urlEncodedStr;
 @property (readonly) NSString *(^addURLParameters)(NSDictionary *parameters);
+@property (readonly) NSString *(^desEncrypt)(void *key, void *iv);
+@property (readonly) NSString *(^desDecrypt)(void *key, void *iv);
 
 @end

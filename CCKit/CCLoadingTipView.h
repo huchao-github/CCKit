@@ -21,7 +21,9 @@ CCKIT_EXTERN CCLoadingTipType const CCLoadingTipTypeNoInternet;
 
 + (void)setImageName:(NSString *)imageName tipMsg:(NSString *)tipMsg forTipType:(CCLoadingTipType)tipType;
 
-+ (void)setButtonTintColor:(UIColor *)tintColor;
++ (void)setButtonBackgroundColor:(UIColor *)color;
+
++ (void)setButtonDefaultTitle:(NSString *)title;
 
 #pragma mark ----
 
@@ -31,13 +33,19 @@ CCKIT_EXTERN CCLoadingTipType const CCLoadingTipTypeNoInternet;
 
 + (void)showTipWithType:(CCLoadingTipType)tipType inView:(UIView *)inView buttonAction:(void(^)(void))buttonAction;
 
++ (void)showTipWithType:(CCLoadingTipType)tipType inView:(UIView *)inView buttonTitle:(NSString *)buttonTitle buttonAction:(void(^)(void))buttonAction;
+
 + (void)showTipWithImage:(UIImage *)image tipMsg:(NSString *)tipMsg inView:(UIView *)inView;
 
 + (void)showTipWithImage:(UIImage *)image tipMsg:(NSString *)tipMsg inView:(UIView *)inView buttonAction:(void(^)(void))buttonAction;
 
++ (void)showTipWithImage:(UIImage *)image tipMsg:(NSString *)tipMsg inView:(UIView *)inView buttonTitle:(NSString *)buttonTitle buttonAction:(void(^)(void))buttonAction;
+
 + (void)showTipWithError:(NSError *)error inView:(UIView *)inView;
 
 + (void)showTipWithError:(NSError *)error inView:(UIView *)inView buttonAction:(void(^)(void))buttonAction;
+
++ (void)showTipWithError:(NSError *)error inView:(UIView *)inView buttonTitle:(NSString *)buttonTitle buttonAction:(void(^)(void))buttonAction;
 
 + (void)hideTipViewForView:(UIView *)forView;
 

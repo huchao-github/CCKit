@@ -39,6 +39,8 @@ typedef NS_ENUM(NSInteger, CCPageViewType) {
 
 - (void)beginRefreshing;
 
+- (void)endRefreshing;
+
 - (void)requestPageList;
 
 - (void)handleSuccessWithPageList:(NSArray *)pageList isLastPage:(BOOL)isLastPage;

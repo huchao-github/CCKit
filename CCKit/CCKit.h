@@ -32,3 +32,4 @@ FOUNDATION_EXPORT const unsigned char CCKitVersionString[];
 #import "CCTableViewController.h"
 #import "CCTableViewSection.h"
 #import "CCTableViewCell.h"
+#import "CCQRScanner.h"
