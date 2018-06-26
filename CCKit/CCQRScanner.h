@@ -10,7 +10,16 @@
 
 @class CCQRScanner;
 
+typedef NS_ENUM(NSInteger, CCQRScannerErrorCode) {
+    /** 没有摄像头设备*/
+    CCQRScannerErrorNoDevice,
+    /** 没有摄像头访问权限*/
+    CCQRScannerErrorNoPermission,
+};
+
 @protocol CCQRScannerDelegate <NSObject>
+/** 启动失败：原因可能是没有摄像头权限，或者摄像头设备损坏*/
+- (void)scanner:(CCQRScanner *)scanner didRunningFailWithError:(NSError *)error;
 /** 扫描到二维码信息*/
 - (void)scanner:(CCQRScanner *)scanner didDetectedString:(NSString *)string;
 /** 从相册中选取的图片未识别到二维码*/
