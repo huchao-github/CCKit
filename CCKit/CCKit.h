@@ -26,6 +26,7 @@ FOUNDATION_EXPORT const unsigned char CCKitVersionString[];
 #import "CCPageListViewController.h"
 #import "CCWebKitViewController.h"
 #import "CCToast.h"
+#import "CCTextActionLabel.h"
 #import "CCModalView.h"
 #import "CCLoadingTipView.h"
 #import "CCLoadingHUD.h"
