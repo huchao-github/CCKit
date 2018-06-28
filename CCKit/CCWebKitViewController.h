@@ -38,7 +38,9 @@
 /** 子类重写，统一位置注册JS交互*/
 - (void)registerNativeFunctions;
 /** 注册原生方法供Js调用*/
-- (void)registerNativeFunction:(NSString *)name selector:(SEL)selector isVoid:(BOOL)isVoid;
+- (void)registerNativeFunction:(NSString *)name selector:(SEL)selector returnVoid:(BOOL)returnVoid;
+/** 处理参数，如需要对JS传过来的参数做统一处理，则重写该方法*/
+- (id)proccessArgsIfNeed:(id)data;
 /** 调用Js方法*/
 - (void)callJsFunction:(NSString *)name data:(id)data;
 - (void)callJsFunction:(NSString *)name data:(id)data callback:(void(^)(id rData))callback;
