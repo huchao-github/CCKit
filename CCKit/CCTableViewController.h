@@ -8,14 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "CCTableViewSection.h"
+#import "CCTableViewFixedHeader.h"
 
 @interface CCTableViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,readonly) UITableView *tableView;
+/** 顶部固定View, default is nil*/
+@property (nonatomic,strong) CCTableViewFixedHeader *fixedHeaderView;
 
 - (instancetype)initWithStyle:(UITableViewStyle)style;
-
+/** 在该方法内创建静态单元格*/
 - (void)loadStaticTableView;
+/** 如果要额外设置tableView的contentInset，需要在该方法内设置*/
+- (void)loadFixedHeaderViewIfNeed;
 
 - (void)addSection:(CCTableViewSection *)section;
 - (void)insertSection:(CCTableViewSection *)section atIndex:(NSInteger)atIndex;
