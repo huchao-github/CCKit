@@ -16,7 +16,8 @@ typedef NS_ENUM(uint32_t, CCDESOptions) {
 @interface NSString (CCKit)
 
 @property (readonly) NSString *md5Str;
-@property (readonly) NSString *urlEncodedStr;
+@property (readonly) NSString *URLEncodedString;
+@property (readonly) NSString *URLDecodedString;
 @property (readonly) NSString *(^addURLParameters)(NSDictionary *parameters);
 /** DES加解密 padding手动填充0*/
 @property (readonly) NSString *(^desEncrypt)(CCDESOptions options, BOOL padding, void *key, void *iv);
