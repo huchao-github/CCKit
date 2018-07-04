@@ -36,6 +36,9 @@ typedef NS_ENUM(NSInteger,CCBorderMask) {
 @property (nonatomic,assign) CGFloat centerX;
 @property (nonatomic,assign) CGFloat centerY;
 
+/** 背景图片，拉伸平铺*/
+@property (nonatomic,strong) UIImage *backgroundImage;
+
 
 @property (nonatomic,readonly) void(^addSubview)(UIView *view);
 @property (nonatomic,readonly) void(^addSubviewMaker)(UIView *view, void(^)(MASConstraintMaker *make));
