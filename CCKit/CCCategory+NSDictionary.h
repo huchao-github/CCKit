@@ -12,4 +12,6 @@
 
 @property (readonly) NSString *urlQuery;
 
+- (NSDictionary *)appendDictionary:(NSDictionary *)otherDictionary;
+
 @end
