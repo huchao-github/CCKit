@@ -27,6 +27,8 @@ CCKIT_EXTERN CCLoadingTipType const CCLoadingTipTypeNoInternet;
 
 #pragma mark ----
 
++ (void)setBackgroundColor:(UIColor *)backgroundColor;
+
 + (void)startLoadingInView:(UIView *)inView;
 
 + (void)showTipWithType:(CCLoadingTipType)tipType inView:(UIView *)inView;
