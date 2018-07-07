@@ -13,6 +13,7 @@ typedef void(^CCTableViewCellSelectedHandler)(void);
 @interface CCTableViewCell : UITableViewCell
 
 @property (nonatomic,assign) CGFloat cellHeight;
+@property (nonatomic,readonly) BOOL didSetCellHeight;
 @property (nonatomic,copy) CCTableViewCellSelectedHandler selectedHandler;
 
 + (instancetype)customCell;

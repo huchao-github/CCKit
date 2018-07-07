@@ -17,5 +17,6 @@
 
 /** for SDWebImage*/
 @property (nonatomic,readonly) void (^setSDImage)(NSURL *url, UIImage *placeholder);
+@property (nonatomic,readonly) void (^setSDBackgroundImage)(NSURL *url, UIImage *placeholder);
 
 @end
