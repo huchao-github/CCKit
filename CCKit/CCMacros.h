@@ -40,5 +40,6 @@ _Pragma("clang diagnostic pop")
 #define RotateAngle(angle)      ((angle) * M_PI / 180)
 #define ScreenScale(w)          ((w)/UIScreen.mainScreen.scale)
 #define L(key)                  NSLocalizedString(key, nil)
+#define IMG(imageName)          [UIImage imageNamed:imageName]
 
 #endif /* CCMacros_h */
