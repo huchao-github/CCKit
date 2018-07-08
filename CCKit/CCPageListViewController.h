@@ -52,11 +52,11 @@ typedef NS_ENUM(NSInteger, CCPageViewType) {
 /** 处理接口请求成功操作，该操作会根据传入的pageList和isLastPage自动刷新列表数据*/
 - (void)handleSuccessWithPageList:(NSArray *)pageList isLastPage:(BOOL)isLastPage;
 
-/** 处理接口请求成功操作，该方法会根据传入的emptyLoadingType类型，自动添加列表数据为空的提示*/
-- (void)handleSuccessWithPageList:(NSArray *)pageList isLastPage:(BOOL)isLastPage emptyLoadingType:(CCLoadingTipType)emptyLoadingType;
+/** 处理接口请求成功操作，该方法会根据传入的emptyTipType类型，自动添加列表数据为空的提示*/
+- (void)handleSuccessWithPageList:(NSArray *)pageList isLastPage:(BOOL)isLastPage emptyTipType:(CCLoadingTipType)emptyTipType;
 
 /** 处理接口请求成功操作，该方法会根据传入的topOffset调整CCLoadingTipView的位置，比如列表头部有banner广告，则一般传入banner的高度*/
-- (void)handleSuccessWithPageList:(NSArray *)pageList isLastPage:(BOOL)isLastPage emptyLoadingType:(CCLoadingTipType)emptyLoadingType topOffset:(CGFloat)topOffset;
+- (void)handleSuccessWithPageList:(NSArray *)pageList isLastPage:(BOOL)isLastPage emptyTipType:(CCLoadingTipType)emptyTipType topOffset:(CGFloat)topOffset;
 
 /** 处理接口请求失败操作，调用该方法会停止MJRefreshHeader和MJRefreshFooter的刷新动作*/
 - (void)handleFailure;
