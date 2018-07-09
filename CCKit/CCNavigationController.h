@@ -9,17 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface CCNavigationController : UINavigationController
-/** 是否自定义返回按钮 default is NO*/
-@property (nonatomic,readonly) BOOL prefersCustomBackItem;
-/**
- * 自定义返回按钮
- * 需要注意的是customBackItem和customBackItemTitle不能同时选择，只能选择其中一个
- * 如果同时重写，则优先customBackItem
- */
-@property (nonatomic,readonly) UIBarButtonItem  *customBackItem;
 /** 自定义返回按钮标题*/
-@property (nonatomic,readonly) NSString *customBackItemTitle;
-
+@property (nonatomic,copy) NSString *customBackItemTitle;
 @end
 
 @interface UIViewController (CCNavigationController)
