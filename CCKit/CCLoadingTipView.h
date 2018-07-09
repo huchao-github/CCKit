@@ -18,9 +18,9 @@ CCKIT_EXTERN CCLoadingTipType const CCLoadingTipTypeNoInternet;
 /** 自定义Loading状态指示器*/
 @property (nonatomic,strong) UIView *customIndicatorView;
 /** 背景颜色 默认值: UIColor.whiteColor*/
-@property (nonatomic,strong) UIColor *backgroundColor;
+@property (nonatomic,copy) UIColor *backgroundColor;
 /** 提示文本颜色 默认值: UIColor.darkGrayColor*/
-@property (nonatomic,strong) UIColor *messageTextColor;
+@property (nonatomic,copy) UIColor *messageTextColor;
 /** 按钮标题 默认值: @"点击重试"*/
 @property (nonatomic,copy) NSString *defaultButtonTitle;
 /** 按钮背景颜色 默认值: UIColor.redColor */
@@ -30,11 +30,17 @@ CCKIT_EXTERN CCLoadingTipType const CCLoadingTipTypeNoInternet;
 /** 设置Tip类型*/
 @property (readonly) void(^setTip)(UIImage *image, NSString *message, NSString *buttonTitle, CCLoadingTipType tipType);
 
-+ (CCLoadingTipConfiguration *)configuration;
+/** 全局设置 (单例)*/
++ (CCLoadingTipConfiguration *)defaultConfiguration;
+/** 全局设置的拷贝 (非单例)，用于单独给特定view设置使用，需要注意的是:不会拷贝customIndicatorView和setTip内容*/
++ (CCLoadingTipConfiguration *)defaultConfigurationCopy;
 
 @end
 
 @interface CCLoadingTipView : UIView
+
+/** 单独对特定view设置*/
++ (void)setConfiguration:(CCLoadingTipConfiguration *)configuration forView:(UIView *)forView;
 
 + (void)startLoadingInView:(UIView *)inView;
 

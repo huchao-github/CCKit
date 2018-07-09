@@ -10,6 +10,7 @@
 
 @interface UITextField (CCKit)
 @property (nonatomic,strong) UIColor *placeholderColor;
+/** @important!!! 设置该属性需要先设置placeholderColor*/
 @property (nonatomic,copy) NSString *_placeholder;
 
 @end
