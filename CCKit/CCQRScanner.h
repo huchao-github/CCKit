@@ -33,6 +33,8 @@ typedef NS_ENUM(NSInteger, CCQRScannerErrorCode) {
 @property (nonatomic,readonly)  UIView *displayView;
 /** 自定义扫描覆盖层*/
 @property (nonatomic,readwrite) UIView *customScanningView;
+/** 扫描页提示文字 */
+@property (nonatomic,copy) NSString *text;
 /** 扫描边角颜色，默认微信颜色 */
 @property (nonatomic,strong) UIColor *tintColor;
 
