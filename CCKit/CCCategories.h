@@ -22,6 +22,7 @@
 #import "CCCategory+UITextField.h"
 #import "CCCategory+UIImageView.h"
 #import "CCCategory+UITableView.h"
+#import "CCCategory+UINavigationBar.h"
 #import "CCCategory+CALayer.h"
 
 #endif /* CCCategories_h */
