@@ -19,6 +19,13 @@ typedef NS_ENUM(NSInteger, CCPageViewType) {
 
 @interface CCPageListViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
 
+/** 给automaticallyAdjustsScrollViewInsets赋值时会同时判断iOS11，并且设置tableView或者collectionView的contentInsetAdjustmentBehavior
+ * automaticallyAdjustsScrollViewInsets = YES, contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic
+ * automaticallyAdjustsScrollViewInsets = NO,  contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever
+ *
+ * @property(nonatomic,assign) BOOL automaticallyAdjustsScrollViewInsets
+ */
+
 @property (nonatomic,readonly) CCPageViewType viewType;
 
 @property (nonatomic,strong,readonly) UITableView *tableView;

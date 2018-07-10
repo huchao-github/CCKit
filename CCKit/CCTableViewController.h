@@ -12,6 +12,13 @@
 
 @interface CCTableViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
+/** 给automaticallyAdjustsScrollViewInsets赋值时会同时判断iOS11，并且设置tableView的contentInsetAdjustmentBehavior
+ * automaticallyAdjustsScrollViewInsets = YES, contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic
+ * automaticallyAdjustsScrollViewInsets = NO,  contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever
+ *
+ * @property(nonatomic,assign) BOOL automaticallyAdjustsScrollViewInsets
+ */
+
 @property (nonatomic,readonly) UITableView *tableView;
 /** 顶部固定View, default is nil*/
 @property (nonatomic,strong) CCTableViewFixedHeader *fixedHeaderView;
