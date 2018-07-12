@@ -10,9 +10,9 @@
 
 @interface UIColor (CCKit)
 /** 默认TabBar、NavigationBar背景色*/
-@property (class,readonly) UIColor *defaultThemeColor;
+@property (class,readonly) UIColor *defaultBarBgColor;
 /** 默认TabBar、NavigationBar边框颜色*/
-@property (class,readonly) UIColor *defaultBorderColor;
+@property (class,readonly) UIColor *defaultBarBorderColor;
 
 @property (class,readonly) UIColor *(^RGB)(int r,int g, int b);
 @property (class,readonly) UIColor *(^RGBA)(int r,int g, int b, float a);

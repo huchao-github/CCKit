@@ -14,5 +14,11 @@
 @end
 
 @interface UIViewController (CCNavigationController)
+
+/** for fake navigation bar*/
+@property (nonatomic,assign) BOOL translucentNavBar;
+@property (nonatomic,strong) UIColor *navigationBarBgColor;
+
 - (BOOL)shouldPopViewController;
+
 @end
