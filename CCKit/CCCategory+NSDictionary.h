@@ -11,7 +11,9 @@
 @interface NSDictionary (CCKit)
 
 @property (readonly) NSString *urlQuery;
-
-- (NSDictionary *)appendDictionary:(NSDictionary *)otherDictionary;
+/** 清理Null对象*/
+- (NSDictionary *)dictionaryWithClearNullObjects;
+/** 合并字典*/
+- (NSDictionary *)dictionaryByAppendingDictionary:(NSDictionary *)aDictionary;
 
 @end
