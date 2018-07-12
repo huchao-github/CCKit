@@ -21,8 +21,9 @@
 }
 @property (nonatomic,weak) id<CCJsCallDelegate> delegate;
 
-@property (nonatomic,readonly) WKWebView *webView;
+@property (nonatomic,readonly) NSURL *URL;
 @property (nonatomic,readonly) NSURLRequest *URLRequest;
+@property (nonatomic,readonly) WKWebView *webView;
 
 - (instancetype)initWithURL:(NSURL *)URL;
 - (instancetype)initWithURL:(NSURL *)URL title:(NSString *)title;
