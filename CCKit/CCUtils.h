@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CCMacros.h"
 
-CCKIT_EXTERN void CCAddNotifyObserver(id observer, SEL selector, NSNotificationName name);
-CCKIT_EXTERN void CCPOSTNotify(NSNotificationName name);
-CCKIT_EXTERN void CCPOSTNotifyWithObject(NSNotificationName name, id object);
+CCKIT_EXTERN void CCNotifyAddObserver(id observer, SEL selector, NSNotificationName name);
+CCKIT_EXTERN void CCNotifyRemoveObserver(id observer, NSNotificationName name);
+CCKIT_EXTERN void CCNotifyPOST(NSNotificationName name);
+CCKIT_EXTERN void CCNotifyPOSTWithObject(NSNotificationName name, id object);
