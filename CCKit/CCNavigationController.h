@@ -19,6 +19,10 @@
 @property (nonatomic,assign) BOOL translucentNavBar;
 @property (nonatomic,strong) UIColor *navigationBarBgColor;
 
+/** 默认shouldTransitionFakeNavBar会根据该方法的返回值去判断是否添加透明和不透明导航栏之间的切换转场效果*/
++ (NSString *)viewControllerClassPrefix;
+
+- (BOOL)shouldTransitionFakeNavBar;
 - (BOOL)shouldPopViewController;
 
 @end
