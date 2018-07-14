@@ -34,6 +34,14 @@
 /** 该方法只会替换当前页面，不会产生backList*/
 - (void)reloadURL:(NSURL *)URL;
 
+/** 重写自定义MJRefreshHeader*/
+- (Class)mjRefreshHeaderClass;
+- (void)refreshWebView;
+
+/** 重写自定义MJRefreshFooter*/
+- (Class)mjRefreshFooterClass;
+- (void)loadMoreData;
+
 #pragma mark - JSBridge
 
 /** 子类重写，统一位置注册JS交互*/
