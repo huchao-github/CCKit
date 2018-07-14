@@ -10,6 +10,8 @@
 
 @interface CCActivityIndicatorView : UIView
 
+@property(null_resettable, nonatomic, strong) UIColor *tintColor NS_AVAILABLE_IOS(7_0);
+
 - (void)startAnimating;
 - (void)stopAnimating;
 

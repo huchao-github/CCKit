@@ -17,6 +17,8 @@ CCKIT_EXTERN CCLoadingTipType const CCLoadingTipTypeNoInternet;
 @interface CCLoadingTipConfiguration : NSObject
 /** 自定义Loading状态指示器*/
 @property (nonatomic,strong) UIView *customIndicatorView;
+/** loading指示器颜色 默认值: UIColor.darkGrayColor*/
+@property (nonatomic,copy) UIColor *defaultIndicatorColor;
 /** 背景颜色 默认值: UIColor.whiteColor*/
 @property (nonatomic,copy) UIColor *backgroundColor;
 /** 提示文本颜色 默认值: UIColor.darkGrayColor*/
