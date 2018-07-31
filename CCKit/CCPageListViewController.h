@@ -28,10 +28,12 @@ typedef NS_ENUM(NSInteger, CCPageViewType) {
 
 @property (nonatomic,readonly) CCPageViewType viewType;
 
-@property (nonatomic,strong,readonly) UITableView *tableView;
-@property (nonatomic,strong,readonly) UICollectionView *collectionView;
-@property (nonatomic,strong,readonly) UICollectionViewFlowLayout *collectionViewLayout;
-@property (nonatomic,strong,readonly) NSMutableArray *dataSource;
+@property (nonatomic,readonly) UITableView *tableView;
+@property (nonatomic,readonly) UICollectionView *collectionView;
+@property (nonatomic,readonly) UICollectionViewFlowLayout *collectionViewLayout;
+@property (nonatomic,readonly) NSMutableArray *dataSource;
+@property (nonatomic,readonly) CCLoadingTipType emptyTipType;
+@property (nonatomic,readonly) CGFloat emptyTipTopOffset;
 
 /** 当前加载的页数*/
 @property (nonatomic,assign) int currentPage;
@@ -73,5 +75,7 @@ typedef NS_ENUM(NSInteger, CCPageViewType) {
 
 /** 处理接口请求失败操作，和handleSuccess传入的topOffset作用一致*/
 - (void)handleFailureWithError:(NSError *)error topOffset:(CGFloat)topOffset;
+
+- (void)deleteIndexPath:(NSIndexPath *)indexPath;
 
 @end

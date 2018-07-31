@@ -29,6 +29,8 @@ CCKIT_EXTERN CCLoadingTipType const CCLoadingTipTypeNoInternet;
 @property (nonatomic,copy) UIColor *defaultButtonBackgroundColor;
 /** Tip图片尺寸 默认值: CGSizeMake(100,100)*/
 @property (nonatomic,assign) CGSize tipImageSize;
+/** 重试按钮尺寸 默认值: CGSizeMake(120,40)*/
+@property (nonatomic,assign) CGSize buttonSize;
 /** 设置Tip类型*/
 @property (readonly) void(^setTip)(UIImage *image, NSString *message, NSString *buttonTitle, CCLoadingTipType tipType);
 

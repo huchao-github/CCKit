@@ -22,11 +22,11 @@ typedef void(^CCTableViewCellSelectedHandler)(void);
 + (instancetype)normalCellWithTitle:(NSString *)title selectionStyle:(UITableViewCellSelectionStyle)selectionStyle accessoryType:(UITableViewCellAccessoryType)accessoryType;
 + (instancetype)normalCellWithTitle:(NSString *)title selectedHandler:(CCTableViewCellSelectedHandler)selectedHandler;
 + (instancetype)normalCellWithTitle:(NSString *)title detailText:(NSString *)detailText selectedHandler:(CCTableViewCellSelectedHandler)selectedHandler;
-+ (instancetype)normalCellWithTitle:(NSString *)title imageName:(NSString *)imageName;
-+ (instancetype)normalCellWithTitle:(NSString *)title imageName:(NSString *)imageName accessoryType:(UITableViewCellAccessoryType)accessoryType;
-+ (instancetype)normalCellWithTitle:(NSString *)title imageName:(NSString *)imageName selectionStyle:(UITableViewCellSelectionStyle)selectionStyle accessoryType:(UITableViewCellAccessoryType)accessoryType;
-+ (instancetype)normalCellWithTitle:(NSString *)title imageName:(NSString *)imageName selectedHandler:(CCTableViewCellSelectedHandler)selectedHandler;
-+ (instancetype)normalCellWithTitle:(NSString *)title imageName:(NSString *)imageName detailText:(NSString *)detailText selectedHandler:(CCTableViewCellSelectedHandler)selectedHandler;
-+ (instancetype)normalCellWithTitle:(NSString *)title imageName:(NSString *)imageName detailText:(NSString *)detailText selectionStyle:(UITableViewCellSelectionStyle)selectionStyle accessoryType:(int)accessoryType selectedHandler:(CCTableViewCellSelectedHandler)selectedHandler;
++ (instancetype)normalCellWithTitle:(NSString *)title image:(UIImage *)image;
++ (instancetype)normalCellWithTitle:(NSString *)title image:(UIImage *)image accessoryType:(UITableViewCellAccessoryType)accessoryType;
++ (instancetype)normalCellWithTitle:(NSString *)title image:(UIImage *)image selectionStyle:(UITableViewCellSelectionStyle)selectionStyle accessoryType:(UITableViewCellAccessoryType)accessoryType;
++ (instancetype)normalCellWithTitle:(NSString *)title image:(UIImage *)image selectedHandler:(CCTableViewCellSelectedHandler)selectedHandler;
++ (instancetype)normalCellWithTitle:(NSString *)title image:(UIImage *)image detailText:(NSString *)detailText selectedHandler:(CCTableViewCellSelectedHandler)selectedHandler;
++ (instancetype)normalCellWithTitle:(NSString *)title image:(UIImage *)image detailText:(NSString *)detailText selectionStyle:(UITableViewCellSelectionStyle)selectionStyle accessoryType:(int)accessoryType selectedHandler:(CCTableViewCellSelectedHandler)selectedHandler;
 
 @end
