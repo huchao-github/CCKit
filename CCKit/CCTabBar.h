@@ -17,12 +17,15 @@ static CGFloat CCTabBarHeight = 50.0f;
 
 @protocol CCTabBarDelegate <NSObject>
 @optional
+- (void)tabBarShouldUpdateBarItemsFrame:(CCTabBar *)tabBar;
 - (void)tabBar:(CCTabBar *)tabBar didSelectItem:(CCTabBarItem *)item atIndex:(NSInteger)atIndex;
 - (BOOL)tabBar:(CCTabBar *)tabBar shouldSelectItemAtIndex:(NSInteger)atIndex;
 @end
 
 
 @interface CCTabBar : UIView
+
+@property (nonatomic,readonly) UIView *contentView;
 
 @property (nonatomic,strong) NSArray <CCTabBarItem *> *barItems;
 
@@ -38,7 +41,9 @@ static CGFloat CCTabBarHeight = 50.0f;
 @property(null_resettable, nonatomic, strong) UIColor *selectedColor;
 
 /** 中间附加Item*/
-- (void)addExtraItem:(UIButton *)extraItem offsetY:(CGFloat)offsetY;
+@property (nonatomic,retain,readonly) UIButton *extraItem;
+@property (nonatomic,readonly) CGPoint extraItemOffset;
+- (void)addExtraItem:(UIButton *)extraItem offset:(CGPoint)offset;
 - (void)removeExtraItem;
 
 @end

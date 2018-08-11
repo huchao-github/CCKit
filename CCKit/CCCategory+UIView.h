@@ -20,9 +20,6 @@ typedef NS_ENUM(NSInteger,CCBorderMask) {
     CCBorderMaskAll         = (CCBorderMaskTop | CCBorderMaskBottom | CCBorderMaskLeft | CCBorderMaskRight),
 };
 
-@interface CCBorderLayer : CALayer
-@end
-
 @interface UIView (CCKit)
 
 @property (nonatomic,assign) CGPoint origin;
@@ -45,8 +42,7 @@ typedef NS_ENUM(NSInteger,CCBorderMask) {
 @property (nonatomic,readonly) void(^removeAllSubviews)(void);
 
 #pragma mark - Border
-
-@property (nonatomic,readonly) CCBorderLayer *borderLayer;
 @property (nonatomic,readonly) void(^setBorder)(CGFloat borderWidth, UIColor *borderColor, CCBorderMask borderMask);
+@property (nonatomic,readonly) void(^setBorderHidden)(BOOL hidden);
 
 @end
