@@ -15,11 +15,11 @@
 #define CCKIT_EXTERN extern __attribute__((visibility ("default")))
 #endif
 
-#define CCIgnorePerformSelectorWarningBegin \
-_Pragma("clang diagnostic push") \
-_Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"")
-#define CCIgnorePerformSelectorWarningEnd \
-_Pragma("clang diagnostic pop")
+//#define CCIgnoreWarning(wFlags)
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+//#define CCIgnoreWarningEnd
+//#pragma clang diagnostic pop
 
 #define CCTimestamp             [NSNumber numberWithInt:[NSDate.date timeIntervalSince1970]].stringValue
 #define CCAppVersionCode        ((NSNumber *)[NSBundle mainBundle].infoDictionary[@"CFBundleVersion"]).intValue
