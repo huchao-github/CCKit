@@ -32,6 +32,9 @@ typedef NS_ENUM(NSInteger, CCTabBarPosition) {
 - (instancetype)init; //tabBarPosition = CCTabBarPositionDefault;
 - (instancetype)initWithTabBarPosition:(CCTabBarPosition)tabBarPosition;
 
+- (void)setupTabBar;
+- (void)setupViewControllers;
+
 /** 如需自定义tabBarItems布局，重写该方法*/
 - (void)updateTabBarItemsFrame;
 

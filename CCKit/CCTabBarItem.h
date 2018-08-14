@@ -19,9 +19,10 @@ typedef NS_ENUM(NSInteger, CCTabBarItemBadgeStyle) {
 
 @property (nonatomic,nullable,copy)  NSString *itemTitle;
 @property (nonatomic,nullable,strong) UIImage *itemImage;
+@property (nonatomic,nullable,strong) UIImage *itemSelectedImage;
 
 /** 普通状态颜色*/
-//@property(null_resettable, nonatomic, strong) UIColor *tintColor NS_AVAILABLE_IOS(7_0);
+@property(null_resettable, nonatomic, strong) UIColor *normalColor;
 /** 选中状态颜色*/
 @property(null_resettable, nonatomic, strong) UIColor *selectedColor;
 
