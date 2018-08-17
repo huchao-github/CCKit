@@ -12,10 +12,8 @@
 
 @property (nonatomic,readwrite) UIView *contentView;
 
-+ (instancetype)sharedHUD;
-
 + (void)startLoadingForView:(UIView *)view;
 
-+ (void)stopLoading;
++ (void)stopLoadingForView:(UIView *)view;
 
 @end
