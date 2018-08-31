@@ -30,11 +30,11 @@
 #define UIScreenSize            UIScreen.mainScreen.bounds.size
 #define UIScreenWidth           UIScreen.mainScreen.bounds.size.width
 #define UIScreenHeight          UIScreen.mainScreen.bounds.size.height
-#define IPHONE_4                CGSizeEqualToSize(UIScreenSize, CGSizeMake(320, 480))
-#define IPHONE_5                CGSizeEqualToSize(UIScreenSize, CGSizeMake(320, 568))
-#define IPHONE_6                CGSizeEqualToSize(UIScreenSize, CGSizeMake(375, 667))
-#define IPHONE_P                CGSizeEqualToSize(UIScreenSize, CGSizeMake(414, 736))
-#define IPHONE_X                CGSizeEqualToSize(UIScreenSize, CGSizeMake(375, 812))
+#define IPHONE_4                (CGSizeEqualToSize(UIScreenSize, CGSizeMake(320, 480))||CGSizeEqualToSize(UIScreenSize, CGSizeMake(480, 320)))
+#define IPHONE_5                (CGSizeEqualToSize(UIScreenSize, CGSizeMake(320, 568))||CGSizeEqualToSize(UIScreenSize, CGSizeMake(568, 320)))
+#define IPHONE_6                (CGSizeEqualToSize(UIScreenSize, CGSizeMake(375, 667))||CGSizeEqualToSize(UIScreenSize, CGSizeMake(667, 375)))
+#define IPHONE_P                (CGSizeEqualToSize(UIScreenSize, CGSizeMake(414, 736))||CGSizeEqualToSize(UIScreenSize, CGSizeMake(736, 414)))
+#define IPHONE_X                (CGSizeEqualToSize(UIScreenSize, CGSizeMake(375, 812))||CGSizeEqualToSize(UIScreenSize, CGSizeMake(812, 375)))
 #define WeakSelf                __weak __typeof(&*self)WSelf = self
 #define WeakObjc(objc,WObjc)    __weak __typeof(&*objc)WObjc = objc
 #define RotateAngle(angle)      ((angle) * M_PI / 180)
