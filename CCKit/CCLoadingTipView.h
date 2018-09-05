@@ -16,19 +16,23 @@ CCKIT_EXTERN CCLoadingTipType const CCLoadingTipTypeNoInternet;
 
 @interface CCLoadingTipConfiguration : NSObject
 /** 自定义Loading状态指示器*/
-@property (nonatomic,strong) UIView *customIndicatorView;
+@property (nonatomic,copy) UIView *customIndicatorView;
 /** loading指示器颜色 默认值: UIColor.darkGrayColor*/
 @property (nonatomic,copy) UIColor *defaultIndicatorColor;
 /** 背景颜色 默认值: UIColor.whiteColor*/
 @property (nonatomic,copy) UIColor *backgroundColor;
 /** 提示文本颜色 默认值: UIColor.darkGrayColor*/
 @property (nonatomic,copy) UIColor *messageTextColor;
-/** 按钮标题 默认值: @"点击重试"*/
-@property (nonatomic,copy) NSString *defaultButtonTitle;
-/** 按钮背景颜色 默认值: UIColor.redColor */
-@property (nonatomic,copy) UIColor *defaultButtonBackgroundColor;
 /** Tip图片尺寸 默认值: CGSizeMake(100,100)*/
 @property (nonatomic,assign) CGSize tipImageSize;
+/** 按钮标题 默认值: @"点击重试"*/
+@property (nonatomic,copy) NSString *buttonTitle;
+/** 按钮标题字体 默认值: [UIFont systemFontOfSize:14.0f]*/
+@property (nonatomic,copy) UIFont *buttonTitleFont;
+/** 按钮文字颜色 默认值: UIColor.whiteColor */
+@property (nonatomic,copy) UIColor *buttonTitleColor;
+/** 按钮背景颜色 默认值: UIColor.redColor */
+@property (nonatomic,copy) UIColor *buttonBackgroundColor;
 /** 重试按钮尺寸 默认值: CGSizeMake(120,40)*/
 @property (nonatomic,assign) CGSize buttonSize;
 /** 设置Tip类型*/
