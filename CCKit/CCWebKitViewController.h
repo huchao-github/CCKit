@@ -25,6 +25,10 @@
 @property (nonatomic,readonly) NSURLRequest *URLRequest;
 @property (nonatomic,readonly) WKWebView *webView;
 
+// 当出现webview内容被导航栏遮盖时，在设置automaticallyAdjustsScrollViewInsets=YES无效的情况下，尝试设置该值为YES
+// 设置该属性后，不可设置automaticallyAdjustsScrollViewInsets属性。
+@property (nonatomic,assign) BOOL setWebSafeFrame;
+
 - (instancetype)initWithURL:(NSURL *)URL;
 - (instancetype)initWithURL:(NSURL *)URL title:(NSString *)title;
 
@@ -48,8 +52,6 @@
 - (void)registerNativeFunctions;
 /** 注册原生方法供Js调用*/
 - (void)registerNativeFunction:(NSString *)name selector:(SEL)selector returnVoid:(BOOL)returnVoid;
-/** 处理参数，如需要对JS传过来的参数做统一处理，则重写该方法*/
-- (id)proccessArgsIfNeed:(id)data;
 /** 调用Js方法*/
 - (void)callJsFunction:(NSString *)name data:(id)data;
 - (void)callJsFunction:(NSString *)name data:(id)data callback:(void(^)(id rData))callback;
