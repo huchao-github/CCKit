@@ -30,6 +30,7 @@ FOUNDATION_EXPORT const unsigned char CCKitVersionString[];
 #import "CCToast.h"
 #import "CCTextActionLabel.h"
 #import "CCModalView.h"
+#import "CCShareModalView.h"
 #import "CCLoadingTipView.h"
 #import "CCLoadingHUD.h"
 #import "CCTableViewController.h"

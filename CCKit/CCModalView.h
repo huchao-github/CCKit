@@ -24,15 +24,15 @@ typedef NS_ENUM(NSInteger, CCModalPresentType)
 /** customView容器*/
 @property (nonatomic,strong,readonly) UIView *containerView;
 /** 自定义视图*/
-@property (nonatomic,strong,readwrite) UIView *customView;
-/** 弹出类型*/
+@property (nonatomic,strong,readonly) UIView *contentView;
+/** 弹出类型 default is CCModalPresentTypeMoveFromBottom*/
 @property (nonatomic,assign) CCModalPresentType presentType;
 /** 背景变暗 */
 @property (nonatomic,assign) BOOL darkerBackground;
 /** 禁用点击背景dismiss */
 @property (nonatomic,assign) BOOL disableTapGesture;
 /** 自定义视图大小 */
-@property (nonatomic,assign) CGSize customViewSize;
+@property (nonatomic,assign) CGSize contentViewSize;
 
 - (void)present;
 
