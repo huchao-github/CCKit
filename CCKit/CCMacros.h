@@ -22,8 +22,8 @@
 //#pragma clang diagnostic pop
 
 #define CCTimestamp             [NSNumber numberWithInt:[NSDate.date timeIntervalSince1970]].stringValue
-#define CCAppVersionCode        ((NSNumber *)[NSBundle mainBundle].infoDictionary[@"CFBundleVersion"]).intValue
-#define CCAppVersionName        ((NSString *)[NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"])
+#define CCAppVersion            [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]
+#define CCAppVersionBuild       [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"]
 #define iOSVersion              UIDevice.currentDevice.systemVersion.floatValue
 #define UIAppWindow             UIApplication.sharedApplication.delegate.window
 #define UIScreenBounds          UIScreen.mainScreen.bounds
