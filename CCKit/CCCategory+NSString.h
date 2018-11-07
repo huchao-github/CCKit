@@ -23,5 +23,7 @@ typedef NS_ENUM(uint32_t, CCDESOptions) {
 /** DES加解密 padding手动填充0*/
 @property (readonly) NSString *(^desEncrypt)(CCDESOptions options, BOOL padding, void *key, void *iv);
 @property (readonly) NSString *(^desDecrypt)(CCDESOptions options, BOOL padding, void *key, void *iv);
+/** 格式化日期*/
+@property (readonly) NSDate *(^formatToDate)(NSString *dateFormat);
 
 @end
