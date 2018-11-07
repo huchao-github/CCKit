@@ -11,6 +11,7 @@
 
 #import "CCCategory+NSObject.h"
 #import "CCCategory+NSDictionary.h"
+#import "CCCategory+NSDate.h"
 #import "CCCategory+NSString.h"
 #import "CCCategory+UIDevice.h"
 #import "CCCategory+UIAlertController.h"
