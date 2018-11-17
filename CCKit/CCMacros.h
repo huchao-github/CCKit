@@ -25,7 +25,6 @@
 #define CCAppVersion            [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]
 #define CCAppVersionBuild       [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"]
 #define iOSVersion              UIDevice.currentDevice.systemVersion.floatValue
-#define UIAppWindow             UIApplication.sharedApplication.delegate.window
 #define UIScreenBounds          UIScreen.mainScreen.bounds
 #define UIScreenSize            UIScreen.mainScreen.bounds.size
 #define UIScreenWidth           UIScreen.mainScreen.bounds.size.width
