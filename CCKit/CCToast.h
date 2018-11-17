@@ -11,7 +11,7 @@
 @interface CCToast : UIView
 
 /**
-* 显示toast，注意该方法toast是显示在UIApplication.sharedApplication.delegate.window上
+* 显示toast，注意该方法toast是显示在CCGetAppWindow()上
 * @param message 需要显示的内容
 */
 + (void)toast:(NSString *)message;
@@ -24,7 +24,7 @@
 + (void)toast:(NSString *)message inView:(UIView *)inView;
 
 /**
- * 显示toast，并且停止view上的CCLoadingHUD，注意该方法toast是显示在UIApplication.sharedApplication.delegate.window上
+ * 显示toast，并且停止view上的CCLoadingHUD，注意该方法toast是显示在CCGetAppWindow()上
  * @param message 需要显示的内容
  * @param view LoadingHUD显示的view
  */
