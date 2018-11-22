@@ -13,10 +13,13 @@
 @property (class,readonly) UIColor *defaultBarBgColor;
 /** 默认TabBar、NavigationBar边框颜色*/
 @property (class,readonly) UIColor *defaultBarBorderColor;
-
+/** eg: UIColor.RGB(255,0,0) */
 @property (class,readonly) UIColor *(^RGB)(int r,int g, int b);
+/** eg: UIColor.RGBA(255,0,0,0.5f) */
 @property (class,readonly) UIColor *(^RGBA)(int r,int g, int b, float a);
+/** eg: UIColor.Hex(0xff0000) */
 @property (class,readonly) UIColor *(^Hex)(uint hex);
+/** eg: UIColor.HexStr(@"ff0000") or UIColor.HexStr(@"#ff0000") */
 @property (class,readonly) UIColor *(^HexStr)(NSString *hexstr);
 
 @end
