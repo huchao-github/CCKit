@@ -20,6 +20,7 @@ FOUNDATION_EXPORT const unsigned char CCKitVersionString[];
 #import "CCMacros.h"
 #import "CCUtils.h"
 #import "CCCategories.h"
+#import "CCAlert.h"
 #import "CCKeyboardHelper.h"
 #import "CCInAppPurchaseHelper.h"
 #import "CCNavigationController.h"
