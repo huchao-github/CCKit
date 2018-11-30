@@ -11,9 +11,10 @@
 @interface UIButton (CCKit)
 
 @property (nonatomic,readonly) void (^setTitle)(NSString *title, UIControlState forState);
-@property (nonatomic,readonly) void (^setTitleColor)(UIColor *color, UIControlState forState);
+@property (nonatomic,readonly) void (^setTitleColor)(UIColor *titleColor, UIControlState forState);
+@property (nonatomic,readonly) void (^setAttributedTitle)(NSAttributedString *attributedTitle, UIControlState forState);
 @property (nonatomic,readonly) void (^setImage)(UIImage *image, UIControlState forState);
-@property (nonatomic,readonly) void (^setBackgroundImage)(UIImage *image, UIControlState forState);
+@property (nonatomic,readonly) void (^setBackgroundImage)(UIImage *backgroundImage, UIControlState forState);
 
 /** for SDWebImage*/
 @property (nonatomic,readonly) void (^setSDImage)(NSURL *url, UIImage *placeholder);
