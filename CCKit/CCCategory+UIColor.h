@@ -16,10 +16,14 @@
 /** eg: UIColor.RGB(255,0,0) */
 @property (class,readonly) UIColor *(^RGB)(int r,int g, int b);
 /** eg: UIColor.RGBA(255,0,0,0.5f) */
-@property (class,readonly) UIColor *(^RGBA)(int r,int g, int b, float a);
+@property (class,readonly) UIColor *(^RGBA)(int r,int g, int b, float alpha);
 /** eg: UIColor.Hex(0xff0000) */
 @property (class,readonly) UIColor *(^Hex)(uint hex);
+/** eg: UIColor.HexA(0xff0000, 0.5f) */
+@property (class,readonly) UIColor *(^HexA)(uint hex, float alpha);
 /** eg: UIColor.HexStr(@"ff0000") or UIColor.HexStr(@"#ff0000") */
 @property (class,readonly) UIColor *(^HexStr)(NSString *hexstr);
+/** eg: UIColor.HexStrA(@"ff0000", 0.5f) or UIColor.HexStrA(@"#ff0000", 0.5f) */
+@property (class,readonly) UIColor *(^HexStrA)(NSString *hexstr, float alpha);
 
 @end
