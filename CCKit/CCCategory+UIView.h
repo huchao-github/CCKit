@@ -50,6 +50,7 @@ typedef NS_ENUM(NSInteger,CCBorderMask) {
 @property (nonatomic,readonly) void(^insertSubviewAboveSubviewMaker)(UIView *view, UIView *aboveView, void(^)(MASConstraintMaker *make));
 @property (nonatomic,readonly) void(^insertSubviewBelowSubviewMaker)(UIView *view, UIView *belowView, void(^)(MASConstraintMaker *make));
 @property (nonatomic,readonly) void(^removeAllSubviews)(void);
+@property (nonatomic,readonly) void(^addGestureRecognizer)(UIGestureRecognizer *gestureRecognizer);
 
 #pragma mark - Border
 @property (nonatomic,readonly) void(^setBorder)(CGFloat borderWidth, UIColor *borderColor, CCBorderMask borderMask);
