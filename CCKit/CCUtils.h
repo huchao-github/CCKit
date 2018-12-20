@@ -15,7 +15,7 @@ CCKIT_EXTERN void CCNotifyRemoveObserver(id observer, NSNotificationName name);
 CCKIT_EXTERN void CCNotifyPOST(NSNotificationName name);
 CCKIT_EXTERN void CCNotifyPOSTWithObject(NSNotificationName name, id object);
 
-CCKIT_EXTERN NSString * CCFileSizeStr(NSUInteger fileSize);
+CCKIT_EXTERN NSString * CCFileSizeStr(uint64_t fileSize);
 
 CCKIT_EXTERN UIWindow * CCGetAppWindowExceptRootViewControllerClass(Class className);
 CCKIT_EXTERN UIWindow * CCGetAppWindow(void);

@@ -11,6 +11,9 @@
 @interface NSDictionary (CCKit)
 
 @property (readonly) NSString *urlQuery;
+
++ (NSDictionary *)dictionaryWithContentsOfJsonFile:(NSString *)path encoding:(NSStringEncoding)encoding;
+
 /** 清理Null对象*/
 - (NSDictionary *)dictionaryWithClearNullObjects;
 /** 合并字典*/

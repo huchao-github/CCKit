@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class MASConstraintMaker;
-
 typedef NS_ENUM(NSInteger,CCBorderMask) {
     CCBorderMaskTop         = 1 << 0,
     CCBorderMaskBottom      = 1 << 1,
@@ -42,6 +40,20 @@ typedef NS_ENUM(NSInteger,CCBorderMask) {
 @property (nonatomic,readonly) void(^insertSubviewAtIndex)(UIView *view, NSInteger atIndex);
 @property (nonatomic,readonly) void(^insertSubviewAboveSubview)(UIView *view, UIView *aboveView);
 @property (nonatomic,readonly) void(^insertSubviewBelowSubview)(UIView *view, UIView *belowView);
+@property (nonatomic,readonly) void(^removeAllSubviews)(void);
+@property (nonatomic,readonly) void(^addGestureRecognizer)(UIGestureRecognizer *gestureRecognizer);
+
+#pragma mark - Border
+@property (nonatomic,readonly) void(^setBorder)(CGFloat borderWidth, UIColor *borderColor, CCBorderMask borderMask);
+@property (nonatomic,readonly) void(^setBorderHidden)(BOOL hidden);
+
+@end
+
+
+@class MASConstraintMaker;
+
+@interface UIView (CCKit_Masonry)
+
 @property (nonatomic,readonly) void(^mas_makeConstraints)(void(^)(MASConstraintMaker *make));
 @property (nonatomic,readonly) void(^mas_remakeConstraints)(void(^)(MASConstraintMaker *make));
 @property (nonatomic,readonly) void(^mas_updateConstraints)(void(^)(MASConstraintMaker *make));
@@ -49,11 +61,5 @@ typedef NS_ENUM(NSInteger,CCBorderMask) {
 @property (nonatomic,readonly) void(^insertSubviewAtIndexMaker)(UIView *view, NSInteger atIndex, void(^)(MASConstraintMaker *make));
 @property (nonatomic,readonly) void(^insertSubviewAboveSubviewMaker)(UIView *view, UIView *aboveView, void(^)(MASConstraintMaker *make));
 @property (nonatomic,readonly) void(^insertSubviewBelowSubviewMaker)(UIView *view, UIView *belowView, void(^)(MASConstraintMaker *make));
-@property (nonatomic,readonly) void(^removeAllSubviews)(void);
-@property (nonatomic,readonly) void(^addGestureRecognizer)(UIGestureRecognizer *gestureRecognizer);
-
-#pragma mark - Border
-@property (nonatomic,readonly) void(^setBorder)(CGFloat borderWidth, UIColor *borderColor, CCBorderMask borderMask);
-@property (nonatomic,readonly) void(^setBorderHidden)(BOOL hidden);
 
 @end

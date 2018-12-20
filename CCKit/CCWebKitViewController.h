@@ -14,7 +14,7 @@
 @protocol CCJsCallDelegate <NSObject>
 @end
 
-@interface CCWebKitViewController : UIViewController <WKUIDelegate,WKNavigationDelegate>
+NS_CLASS_AVAILABLE_IOS(8_0) @interface CCWebKitViewController : UIViewController <WKUIDelegate,WKNavigationDelegate>
 {
 @private
     WKWebViewJavascriptBridge *_JsCall;

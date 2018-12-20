@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImageView (CCKit)
+@interface UIImageView (CCKit_SDWebImage)
 
-@property (nonatomic,readonly) void (^setSDImage)(NSURL *url, UIImage *placeholder);
+@property (nonatomic,readonly) void (^setSDImage)(NSURL *url, UIImage *placeholder, NSUInteger/*SDWebImageOptions*/ options);
 
 @end

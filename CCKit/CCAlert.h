@@ -33,6 +33,8 @@ typedef void(^CCAlertInputBlock)(NSString *title, NSString *message, NSArray *bu
  }, ^(UITextField *textfield) {
     // 配置UITextField
  }, nil);
+ 
+ iOS7 and earlier textfieldConfiguration最多配置两个.
  */
 @property (class,readonly) CCAlertInputBlock alertInput;
 
@@ -40,6 +42,7 @@ typedef void(^CCAlertInputBlock)(NSString *title, NSString *message, NSArray *bu
  CCAlert.actionSheet(@"title", @"message", @[@[@"拍照",@"相册"], @"取消"], ^(NSInteger buttonIndex) {
     // do something...
  });
+ iOS7 and earlier message must be nil.
  */
 @property (class,readonly) CCAlertBlock actionSheet;
 
