@@ -21,9 +21,6 @@
 //#define CCIgnoreWarningEnd
 //#pragma clang diagnostic pop
 
-#define CCTimestamp             [NSNumber numberWithInt:[NSDate.date timeIntervalSince1970]].stringValue
-#define CCAppVersion            [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]
-#define CCAppVersionBuild       [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"]
 #define iOSVersion              UIDevice.currentDevice.systemVersion.floatValue
 #define UIScreenBounds          UIScreen.mainScreen.bounds
 #define UIScreenSize            UIScreen.mainScreen.bounds.size

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDate (CCKit)
+/** 时间戳*/
+@property (readonly) NSNumber *timestamp;
 /** 格式化日期 */
 @property (readonly) NSString *(^formatToStr)(NSString *dateFormat);
 
