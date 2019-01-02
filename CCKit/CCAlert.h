@@ -46,4 +46,7 @@ typedef void(^CCAlertInputBlock)(NSString *title, NSString *message, NSArray *bu
  */
 @property (class,readonly) CCAlertBlock actionSheet;
 
+/** 针对某些多个window的情况设置*/
+@property (class,readonly) void(^set_presentingViewController)(UIViewController *viewController);
+
 @end
