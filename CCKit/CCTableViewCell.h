@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^CCTableViewCellSelectedHandler)(void);
+@class CCTableViewCell;
+
+typedef void(^CCTableViewCellSelectedHandler)(CCTableViewCell *sender);
 
 @interface CCTableViewCell : UITableViewCell
 
