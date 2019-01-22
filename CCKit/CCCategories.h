@@ -10,9 +10,10 @@
 #define CCCategories_h
 
 #import "CCCategory+NSObject.h"
-#import "CCCategory+NSDictionary.h"
+#import "CCCategory+NSBundle.h"
 #import "CCCategory+NSDate.h"
 #import "CCCategory+NSString.h"
+#import "CCCategory+NSDictionary.h"
 #import "CCCategory+UIDevice.h"
 #import "CCCategory+UIColor.h"
 #import "CCCategory+UIControl.h"
