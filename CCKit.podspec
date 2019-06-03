@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CCKit"
-  s.version      = "1.2.1"
+  s.version      = "1.2.2"
   s.summary      = "概要"
   s.description  = "描述"
   s.homepage     = "https://github.com/huchao-github/CCKit"
