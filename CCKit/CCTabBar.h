@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class CCTabBar;
 
-static CGFloat CCTabBarHeight = 50.0f;
+extern const CGFloat CCTabBarDefaultHeight; // value is 50.0f
 
 @protocol CCTabBarDelegate <NSObject>
 @optional

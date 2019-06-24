@@ -29,8 +29,10 @@ typedef NS_ENUM(NSInteger, CCTabBarPosition) {
 @property (nonatomic,assign) NSInteger selectedIndex;
 @property (nonatomic,assign) __kindof UIViewController *selectedViewController;
 
-- (instancetype)init; //tabBarPosition = CCTabBarPositionDefault;
-- (instancetype)initWithTabBarPosition:(CCTabBarPosition)tabBarPosition;
+- (instancetype)init; // CCTabBarPositionDefault and CCTabBarDefaultHeight;
+- (instancetype)initWithTabBarHeight:(CGFloat)customBarHeight;              // CCTabBarPositionDefault, customBarHeight不能小于CCTabBarDefaultHeight
+- (instancetype)initWithTabBarPosition:(CCTabBarPosition)tabBarPosition;    // CCTabBarDefaultHeight
+- (instancetype)initWithTabBarPosition:(CCTabBarPosition)tabBarPosition customBarHeight:(CGFloat)customBarHeight;
 
 - (void)setupTabBar;
 - (void)setupViewControllers;
