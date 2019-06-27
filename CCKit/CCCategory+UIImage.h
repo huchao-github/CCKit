@@ -28,6 +28,13 @@
 @property (class,readonly) UIImage *(^fromColorEx)(id color, CGSize size, CGFloat cornerRadius);
 
 /**
+ * 根据颜色创建一个指定size大小的渐变色图片
+ * 参数colors为UIColor类型数组
+ * startPoint endPoint 左上角{0,0}、左下角{0,1}、右上角{1,0}、右下角{1,1}
+ */
+@property (class,readonly) UIImage *(^gradientImage)(NSArray<UIColor *> *colors, CGSize size, CGPoint startPoint, CGPoint endPoint);
+
+/**
  * 给UIImage着色
  * 参数color为UIColor类型或者NSString类型，如过传NSString类型，则格式为@"#FF0000"，颜色16进制字符串
  */
