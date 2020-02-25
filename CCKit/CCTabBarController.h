@@ -18,6 +18,8 @@ typedef NS_ENUM(NSInteger, CCTabBarPosition) {
     CCTabBarPositionDefault = CCTabBarPositionBottom,
 };
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface CCTabBarController : UIViewController <CCTabBarDelegate>
 
 @property (nonatomic,readonly) CCTabBar * tabBar;
@@ -45,9 +47,11 @@ typedef NS_ENUM(NSInteger, CCTabBarPosition) {
 
 @interface UIViewController (CCTabBarController)
 
-@property (nonatomic,readonly) CCTabBarItem *cc_tabBarItem;
-@property (nonatomic,readonly) CCTabBarController *cc_tabBarController;
+@property (nonatomic,readonly,nullable) CCTabBarItem *cc_tabBarItem;
+@property (nonatomic,readonly,nullable) CCTabBarController *cc_tabBarController;
 
 - (void)refreshNavigationItem;
 
 @end
+
+NS_ASSUME_NONNULL_END

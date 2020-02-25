@@ -19,7 +19,7 @@ typedef void(^CCIAPFailure)(BOOL isCanceled, NSError *error);
 /** 内购订单验证参数 {"receipt-data":"xxxxx"}*/
 //@property (nonatomic,readonly) NSString *receiptData;
 
-+ (CCInAppPurchaseHelper *)helper;
++ (instancetype)helper;
 
 - (void)payForProductIdentifier:(NSString *)identifier success:(CCIAPSuccess)success failure:(CCIAPFailure)failure;
 

@@ -29,6 +29,6 @@ typedef void(^CCTableViewCellSelectedHandler)(CCTableViewCell *sender);
 + (instancetype)normalCellWithTitle:(NSString *)title image:(UIImage *)image selectionStyle:(UITableViewCellSelectionStyle)selectionStyle accessoryType:(UITableViewCellAccessoryType)accessoryType;
 + (instancetype)normalCellWithTitle:(NSString *)title image:(UIImage *)image selectedHandler:(CCTableViewCellSelectedHandler)selectedHandler;
 + (instancetype)normalCellWithTitle:(NSString *)title image:(UIImage *)image detailText:(NSString *)detailText selectedHandler:(CCTableViewCellSelectedHandler)selectedHandler;
-+ (instancetype)normalCellWithTitle:(NSString *)title image:(UIImage *)image detailText:(NSString *)detailText selectionStyle:(UITableViewCellSelectionStyle)selectionStyle accessoryType:(int)accessoryType selectedHandler:(CCTableViewCellSelectedHandler)selectedHandler;
++ (instancetype)normalCellWithTitle:(NSString *)title image:(UIImage *)image detailText:(NSString *)detailText selectionStyle:(UITableViewCellSelectionStyle)selectionStyle accessoryType:(UITableViewCellAccessoryType)accessoryType selectedHandler:(CCTableViewCellSelectedHandler)selectedHandler;
 
 @end
