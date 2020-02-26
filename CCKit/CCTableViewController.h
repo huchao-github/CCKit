@@ -30,6 +30,8 @@
 - (void)loadFixedHeaderViewIfNeed;
 
 - (void)addSection:(CCTableViewSection *)section;
+- (void)addSection:(CCTableViewSection *)section withRowAnimation:(UITableViewRowAnimation)animation;
 - (void)insertSection:(CCTableViewSection *)section atIndex:(NSInteger)atIndex;
+- (void)insertSection:(CCTableViewSection *)section atIndex:(NSInteger)atIndex withRowAnimation:(UITableViewRowAnimation)animation;
 
 @end
