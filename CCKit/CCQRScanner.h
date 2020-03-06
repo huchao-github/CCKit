@@ -45,6 +45,6 @@ typedef NS_ENUM(NSInteger, CCQRScannerErrorCode) {
 - (void(^)(void))_stopRunning;
 
 /** 从相册中读取二维码*/
-- (void)readQRCodeFromAlbumWithPresentedViewController:(UIViewController *)viewController;
+- (UIImagePickerController *)imagePickerViewController;
 
 @end

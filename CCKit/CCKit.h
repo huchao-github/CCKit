@@ -11,10 +11,6 @@
 
 /**
  pod 'Masonry', '1.1.0'
- pod 'MJExtension', '3.0.13'
- pod 'MJRefresh', '3.1.15'
- pod 'WebViewJavascriptBridge', '6.0.3'
- pod 'SDWebImage', '4.2.2'
  */
 
 #import "CCMacros.h"
@@ -25,8 +21,6 @@
 #import "CCInAppPurchaseHelper.h"
 #import "CCNavigationController.h"
 #import "CCTabBarController.h"
-#import "CCPageListViewController.h"
-#import "CCWebKitViewController.h"
 #import "CCActivityIndicatorView.h"
 #import "CCToast.h"
 #import "CCTextActionLabel.h"
