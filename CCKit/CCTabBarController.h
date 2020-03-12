@@ -47,10 +47,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIViewController (CCTabBarController)
 
-@property (nonatomic,readonly,nullable) CCTabBarItem *cc_tabBarItem;
-@property (nonatomic,readonly,nullable) CCTabBarController *cc_tabBarController;
+@property (nonatomic,readonly,nullable) CCTabBarItem *ccTabBarItem;
+@property (nonatomic,readonly,nullable) CCTabBarController *ccTabBarController;
 
-- (void)refreshNavigationItem;
+/** 原refreshNavigationItem似乎与系统方法冲突了*/
+- (void)ccRefreshNavigationItems;
 
 @end
 

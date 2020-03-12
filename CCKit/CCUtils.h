@@ -10,12 +10,9 @@
 #import <Foundation/Foundation.h>
 #import "CCMacros.h"
 
-CCKIT_EXTERN void CCNotifyAddObserver(id observer, SEL selector, NSNotificationName name);
-CCKIT_EXTERN void CCNotifyRemoveObserver(id observer, NSNotificationName name);
-CCKIT_EXTERN void CCNotifyPOST(NSNotificationName name);
-CCKIT_EXTERN void CCNotifyPOSTWithObject(NSNotificationName name, id object);
-
 CCKIT_EXTERN NSString * CCFileSizeStr(uint64_t fileSize);
 
 CCKIT_EXTERN UIWindow * CCGetAppWindowExceptRootViewControllerClass(Class className);
 CCKIT_EXTERN UIWindow * CCGetAppWindow(void);
+
+CCKIT_EXTERN void CCHookMessageEx(Class _class, SEL sel, IMP imp, IMP *result);
