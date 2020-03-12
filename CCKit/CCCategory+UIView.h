@@ -13,9 +13,18 @@ typedef NS_ENUM(NSInteger,CCBorderMask) {
     CCBorderMaskBottom      = 1 << 1,
     CCBorderMaskLeft        = 1 << 2,
     CCBorderMaskRight       = 1 << 3,
-    CCBorderMaskTopBottom   = (CCBorderMaskTop | CCBorderMaskBottom),
-    CCBorderMaskLeftRight   = (CCBorderMaskLeft | CCBorderMaskRight),
-    CCBorderMaskAll         = (CCBorderMaskTop | CCBorderMaskBottom | CCBorderMaskLeft | CCBorderMaskRight),
+};
+
+typedef NS_ENUM(NSInteger,CCCornerMask) {
+    CCCornerMaskTopLeft     = 1 << 0,
+    CCCornerMaskTopRight    = 1 << 1,
+    CCCornerMaskBottomLeft  = 1 << 2,
+    CCCornerMaskBottomRight = 1 << 3,
+    CCCornerMaskTop         = CCCornerMaskTopLeft | CCCornerMaskTopRight,
+    CCCornerMaskBottom      = CCCornerMaskBottomLeft | CCCornerMaskBottomRight,
+    CCCornerMaskLeft        = CCCornerMaskTopLeft | CCCornerMaskBottomLeft,
+    CCCornerMaskRight       = CCCornerMaskTopRight | CCCornerMaskBottomRight,
+    CCCornerMaskAll         = CCCornerMaskTopLeft | CCCornerMaskTopRight | CCCornerMaskBottomLeft | CCCornerMaskBottomRight,
 };
 
 @interface UIView (CCKit)
@@ -44,8 +53,12 @@ typedef NS_ENUM(NSInteger,CCBorderMask) {
 @property (nonatomic,readonly) void(^addGestureRecognizer)(UIGestureRecognizer *gestureRecognizer);
 
 #pragma mark - Border
+/** 仅支持单边框和双边框*/
 @property (nonatomic,readonly) void(^setBorder)(CGFloat borderWidth, UIColor *borderColor, CCBorderMask borderMask);
 @property (nonatomic,readonly) void(^setBorderHidden)(BOOL hidden);
+
+#pragma mark - Corner
+@property (nonatomic,readonly) void(^setCorner)(CGFloat cornerRadius, CCCornerMask cornerMask);
 
 @end
 
