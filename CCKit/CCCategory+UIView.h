@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger,CCBorderMask) {
+typedef NS_OPTIONS(NSUInteger,CCBorderMask) {
     CCBorderMaskTop         = 1 << 0,
     CCBorderMaskBottom      = 1 << 1,
     CCBorderMaskLeft        = 1 << 2,
     CCBorderMaskRight       = 1 << 3,
 };
 
-typedef NS_ENUM(NSInteger,CCCornerMask) {
+typedef NS_OPTIONS(NSUInteger,CCCornerMask) {
     CCCornerMaskTopLeft     = 1 << 0,
     CCCornerMaskTopRight    = 1 << 1,
     CCCornerMaskBottomLeft  = 1 << 2,
