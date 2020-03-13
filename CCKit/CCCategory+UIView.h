@@ -60,6 +60,9 @@ typedef NS_OPTIONS(NSUInteger,CCCornerMask) {
 #pragma mark - Corner
 @property (nonatomic,readonly) void(^setCorner)(CGFloat cornerRadius, CCCornerMask cornerMask);
 
+#pragma mark - View to Image
+@property (nonatomic,readonly) UIImage *toImage;
+
 @end
 
 
