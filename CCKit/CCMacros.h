@@ -22,7 +22,7 @@
 //#pragma clang diagnostic pop
 
 #define iOSver                  UIDevice.currentDevice.systemVersion.floatValue
-#define iOSver_andEarlier(ver)  (iOSver < ((int)ver + 1))
+#define iOSver_andEarlier(ver)  (iOSver <= (int)ver)
 #define iOSver_andLater(ver)    (iOSver >= (int)ver)
 #define iOSver_x(ver)           (iOSver_andLater(ver) && iOSver_andEarlier(ver))
 
